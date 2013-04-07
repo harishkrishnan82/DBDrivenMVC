@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MVCRoutes" Class="RoutesClassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\MVCRoutes.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MVCRoutesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MVCRoutes" Member="MVCRoutes">
+    <Type Name="MVCRoute">
+      <Column Name="routeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="routeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="routePattern" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="routeOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isActive" Type="System.Boolean" DbType="BIT NOTNULL" CanBeNull="false" />
+      <Association Name="MVCRoute_MVCroutesParam" Member="MVCroutesParams" ThisKey="routeId" OtherKey="routeID" Type="MVCroutesParam" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MVCroutesParam" Member="MVCroutesParams">
+    <Type Name="MVCroutesParam">
+      <Column Name="paramId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="routeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="paramKey" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="paramContraint" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="paramValue" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="MVCRoute_MVCroutesParam" Member="MVCRoute" ThisKey="routeID" OtherKey="routeId" Type="MVCRoute" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

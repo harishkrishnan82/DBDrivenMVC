@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="RoutesClass">
+  <DataContextMoniker Name="/RoutesClassDataContext" />
+  <nestedChildShapes>
+    <classShape Id="de6195d3-ab02-4979-ae26-740d4ddb2a1b" absoluteBounds="0.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/RoutesClassDataContext/MVCRoute" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de327f38-1dc6-48d6-89f5-4f5f139f3163" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b1133b2e-542a-48d1-bf7c-e2a7435085c5" absoluteBounds="3.75, 0.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/RoutesClassDataContext/MVCroutesParam" />
+      <nestedChildShapes>
+        <elementListCompartment Id="33f7da28-7004-4b5c-a00f-bf451a6a4a7c" absoluteBounds="3.765, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.69794840494792); (3.75 : 1.69794840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RoutesClassDataContext/MVCRoute/MVCRoute_MVCroutesParam" />
+      <nodes>
+        <classShapeMoniker Id="de6195d3-ab02-4979-ae26-740d4ddb2a1b" />
+        <classShapeMoniker Id="b1133b2e-542a-48d1-bf7c-e2a7435085c5" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="TemplateMaps">
+  <DataContextMoniker Name="/TemplateMapsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="aa7e3551-56ba-4b4f-9e3d-5322e2653cb6" absoluteBounds="0.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/TemplateMapsDataContext/TempMapping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f479dd35-c9b2-4943-95b3-e9d78a45bb05" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="050346ec-2961-42d2-a766-34680ffad65a" absoluteBounds="3.625, 2.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/TemplateMapsDataContext/TemplateInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="04d44e40-89d4-4b72-97e5-aa62b19aa3d1" absoluteBounds="3.64, 2.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b2907690-6434-4c27-ba1f-bbe0cc46706a" absoluteBounds="0.75, 3.75, 2, 1.193992513020834">
+      <DataClassMoniker Name="/TemplateMapsDataContext/RouteInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54270492-b7c8-4305-bd52-49a9ff3810a8" absoluteBounds="0.765, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.32294840494792); (3.625 : 2.32294840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TemplateMapsDataContext/TempMapping/TempMapping_TemplateInfo" />
+      <nodes>
+        <classShapeMoniker Id="aa7e3551-56ba-4b4f-9e3d-5322e2653cb6" />
+        <classShapeMoniker Id="050346ec-2961-42d2-a766-34680ffad65a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 2.52089680989583); (1.75 : 3.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TemplateMapsDataContext/TempMapping/TempMapping_RouteInfo" />
+      <nodes>
+        <classShapeMoniker Id="aa7e3551-56ba-4b4f-9e3d-5322e2653cb6" />
+        <classShapeMoniker Id="b2907690-6434-4c27-ba1f-bbe0cc46706a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

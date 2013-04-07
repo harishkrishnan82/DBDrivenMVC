@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MVCRoutes" Class="TemplateMapsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\MVCRoutes.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MVCRoutesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TempMapping" Member="TempMappings">
+    <Type Name="TempMapping">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TempID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Key]" Member="Key" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="RouteID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TempMapping_TemplateInfo" Member="TemplateInfos" ThisKey="TempID" OtherKey="TempID" Type="TemplateInfo" />
+      <Association Name="TempMapping_RouteInfo" Member="RouteInfos" ThisKey="RouteID" OtherKey="RouteID" Type="RouteInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TemplateInfo" Member="TemplateInfos">
+    <Type Name="TemplateInfo">
+      <Column Name="TempID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TempName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TempPath" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="TempMapping_TemplateInfo" Member="TempMapping" ThisKey="TempID" OtherKey="TempID" Type="TempMapping" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RouteInfo" Member="RouteInfos">
+    <Type Name="RouteInfo">
+      <Column Name="RouteID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RouteName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TempMapping_RouteInfo" Member="TempMapping" ThisKey="RouteID" OtherKey="RouteID" Type="TempMapping" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
